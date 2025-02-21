@@ -41,8 +41,9 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
                 // Convert to Base64 while minimizing memory footprint
                 attachmentStream.Position = 0;
                 using var readerStream = new StreamReader(attachmentStream);
-                string base64Content = Convert.ToBase64String(attachmentStream.ToArray());
-                string content = Convert.ToString(attachmentStream);
+                //string base64Content = Convert.ToBase64String(attachmentStream.ToArray());
+                //string content = Convert.ToString(attachmentStream);
+                string content = ConvertToBinaryString(attachmentStream.ToArray());
                 //string content = Convert.ToString(attachmentStream.ToArray());
                 //Convert.ToString(attachmentStream.ToArray());
                 //ToBase64String(attachmentStream.ToArray());
@@ -77,6 +78,15 @@ static bool IsBase64String(string input)
     if (string.IsNullOrEmpty(input)) return false;
     Span<byte> buffer = new Span<byte>(new byte[input.Length]);
     return Convert.TryFromBase64String(input, buffer, out _);
+}
+static string ConvertToBinaryString(byte[] byteArray)
+{
+    StringBuilder binaryStringBuilder = new StringBuilder();
+    foreach (byte byteValue in byteArray)
+    {
+        binaryStringBuilder.Append(Convert.ToString(byteValue, 2).PadLeft(8, '0'));
+    }
+    return binaryStringBuilder.ToString();
 }
 
 app.Run();
