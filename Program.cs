@@ -32,7 +32,6 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
         // Stream attachments instead of loading them fully into memory
         var attachments = new List<object>();
 
-        /*
         foreach (var attachment in message.Attachments)
         {
             if (attachment is MimePart mimePart)
@@ -57,11 +56,10 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
                 {
                     FileName = mimePart.FileName,
                     ContentType = mimePart.ContentType.MimeType,
-                    Content = content
+                    Content = mimePart.Content
                 });
             }
         }
-        */
 
         // Construct response with streamed data
         var response = new
