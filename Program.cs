@@ -42,7 +42,7 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
                 attachmentStream.Position = 0;
                 using var readerStream = new StreamReader(attachmentStream);
                 string base64Content = Convert.ToBase64String(attachmentStream.ToArray());
-                string content = attachmentStream.ToArray().ToString();
+                string content = Convert.ToString(attachmentStream.ToArray());
                 //Convert.ToString(attachmentStream.ToArray());
                 //ToBase64String(attachmentStream.ToArray());
 
