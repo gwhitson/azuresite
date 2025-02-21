@@ -65,8 +65,8 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
         var response = new
         {
             OriginalEmail = Convert.ToBase64String(Encoding.UTF8.GetBytes(emlContent)),
-            //Attachments = attachments
-            Attachments = message.Attachments
+            Attachments = attachments
+            //Attachments = message.Attachments
         };
 
         return Results.Ok(response);
