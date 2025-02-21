@@ -37,8 +37,9 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
             if (attachment is MimePart mimePart)
             {
                 using var attachmentStream = new MemoryStream();
-                await mimePart.Content.DecodeToAsync(attachmentStream);
-                
+                //await mimePart.Content.DecodeToAsync(attachmentStream);
+                await mimePart.Content.WriteToAsync(attachmentStream);
+
                 // Convert to Base64 while minimizing memory footprint
                 attachmentStream.Position = 0;
                 using var readerStream = new StreamReader(attachmentStream);
@@ -56,7 +57,7 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
                 {
                     FileName = mimePart.FileName,
                     ContentType = mimePart.ContentType.MimeType,
-                    Content = mimePart.Content.ToString()
+                    Content = readerStream.ReadToEnd()
                 });
             }
         }
