@@ -53,7 +53,7 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
                 {
                     FileName = mimePart.FileName,
                     ContentType = mimePart.ContentType.MimeType,
-                    Content = attachmentStream
+                    Content = attachmentStream.ToArray()
                     //Content = content
                 });
             }
