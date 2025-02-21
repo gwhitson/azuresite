@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "KVR3tlnSZ3M=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gavin.whitson\\OneDrive - Leonardo DRS\\Documents\\LeoDRSEmailParseAPI\\LeoDRSEmailParseAPI\\LeoDRSEmailParseAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gavin.whitson\\.nuget\\packages\\bouncycastle.cryptography\\2.5.0\\bouncycastle.cryptography.2.5.0.nupkg.sha512",
+    "C:\\Users\\gavin.whitson\\.nuget\\packages\\mimekit\\4.10.0\\mimekit.4.10.0.nupkg.sha512",
+    "C:\\Users\\gavin.whitson\\.nuget\\packages\\system.formats.asn1\\8.0.1\\system.formats.asn1.8.0.1.nupkg.sha512",
+    "C:\\Users\\gavin.whitson\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

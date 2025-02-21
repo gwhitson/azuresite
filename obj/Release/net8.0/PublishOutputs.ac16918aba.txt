@@ -1,0 +1,16 @@
+C:\Temp\LeoDRSEmailParseAPI\publish\LeoDRSEmailParseAPI.exe
+C:\Temp\LeoDRSEmailParseAPI\publish\publish\web.config
+C:\Temp\LeoDRSEmailParseAPI\publish\appsettings.Development.json
+C:\Temp\LeoDRSEmailParseAPI\publish\appsettings.json
+C:\Temp\LeoDRSEmailParseAPI\publish\publish\appsettings.Development.json
+C:\Temp\LeoDRSEmailParseAPI\publish\publish\appsettings.json
+C:\Temp\LeoDRSEmailParseAPI\publish\publish\LeoDRSEmailParseAPI.deps.json
+C:\Temp\LeoDRSEmailParseAPI\publish\publish\LeoDRSEmailParseAPI.runtimeconfig.json
+C:\Temp\LeoDRSEmailParseAPI\publish\LeoDRSEmailParseAPI.dll
+C:\Temp\LeoDRSEmailParseAPI\publish\LeoDRSEmailParseAPI.deps.json
+C:\Temp\LeoDRSEmailParseAPI\publish\LeoDRSEmailParseAPI.runtimeconfig.json
+C:\Temp\LeoDRSEmailParseAPI\publish\LeoDRSEmailParseAPI.pdb
+C:\Temp\LeoDRSEmailParseAPI\publish\BouncyCastle.Cryptography.dll
+C:\Temp\LeoDRSEmailParseAPI\publish\MimeKit.dll
+C:\Temp\LeoDRSEmailParseAPI\publish\System.Security.Cryptography.Pkcs.dll
+C:\Temp\LeoDRSEmailParseAPI\publish\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
