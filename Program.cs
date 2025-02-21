@@ -42,7 +42,8 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
                 attachmentStream.Position = 0;
                 using var readerStream = new StreamReader(attachmentStream);
                 string base64Content = Convert.ToBase64String(attachmentStream.ToArray());
-                byte[] content = Convert.FromBase64String(base64Content);
+                string content = Convert.ToString(Convert.FromBase64String(base64Content));
+                //byte[] content = Convert.FromBase64String(base64Content);
                 //string content = Convert.ToString(attachmentStream);
                 //string content = Convert.ToString(attachmentStream.ToArray());
                 //string content = Convert.ToString(attachmentStream.ToArray());
@@ -53,8 +54,7 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
                 {
                     FileName = mimePart.FileName,
                     ContentType = mimePart.ContentType.MimeType,
-                    //Content = attachmentStream.ToArray()
-                    Content = content.ToString()
+                    Content = content
                 });
             }
         }
