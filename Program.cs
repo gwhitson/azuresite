@@ -32,6 +32,7 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
         // Stream attachments instead of loading them fully into memory
         var attachments = new List<object>();
 
+        /*
         foreach (var attachment in message.Attachments)
         {
             if (attachment is MimePart mimePart)
@@ -60,12 +61,14 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
                 });
             }
         }
+        */
 
         // Construct response with streamed data
         var response = new
         {
             OriginalEmail = Convert.ToBase64String(Encoding.UTF8.GetBytes(emlContent)),
-            Attachments = attachments
+            //Attachments = attachments
+            Attachments = message.Attachments
         };
 
         return Results.Ok(response);
