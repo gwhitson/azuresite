@@ -40,7 +40,7 @@ app.MapPost("/api/ParseEmailWithAttachments", async (HttpContext context) =>
                 //await mimePart.Content.DecodeToAsync(attachmentStream);
                 await mimePart.Content.WriteToAsync(attachmentStream);
                 var newStream = new MemoryStream();
-                mimePart.Content.DecodeTo(newStream);
+                mimePart.WriteTo(newStream, true);
                 //newStream.ToArray();
                 string content = Encoding.UTF8.GetString(newStream.ToArray());
 
